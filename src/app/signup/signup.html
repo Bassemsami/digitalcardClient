@@ -1,0 +1,61 @@
+<div class="max-w-md mx-auto mt-20 p-6 bg-[rgba(255,255,255,0.75)] shadow-lg rounded-xl ">
+  <a href="https://orascom.com/" target="_blank" rel="noopener noreferrer">
+    <img class="transition-all duration-300 hover:scale-115 w-32 h-auto rounded-lg mx-auto mb-5"
+         src="assets/orascom.png" />
+  </a>
+  <h2 class="text-2xl font-bold mb-6 text-center">Create Your Account</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="mb-4">
+      <label for="Name" class="block text-sm font-medium mb-1">Name</label>
+      <input
+        id="Name"
+        name="Name"
+        type="text"
+        [(ngModel)]="name"
+        required
+        class="w-full p-2 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="mb-4">
+      <label for="Email" class="block text-sm font-medium mb-1">Email</label>
+      <input
+        id="Email"
+        name="Email"
+        type="email"
+        [(ngModel)]="email"
+        required
+        class="w-full p-2 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+      />
+    </div>
+
+    <!-- Password -->
+    <div class="mb-6">
+      <label for="Password" class="block text-sm font-medium mb-1">Password</label>
+      <input
+        id="Password"
+        name="Password"
+        type="password"
+        [(ngModel)]="password"
+        required
+        class="w-full p-2 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+      />
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="w-full bg-black hover:scale-105 text-white font-semibold py-2 px-4 rounded-full transition duration-300"
+    >
+      Sign Up
+    </button>
+  </form>
+
+  <p class="text-center text-sm text-gray-600 mt-4">
+    Already have an account?
+    <a routerLink="/login" class="text-blue-800 hover:underline">Log in here</a>
+  </p>
+</div>

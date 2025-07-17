@@ -1,0 +1,9 @@
+<!-- Fixed background -->
+<div class="fixed inset-0 z-0 bg-cover bg-center" style="background-image: url('assets/bg1.jpg')"></div>
+
+<!-- Foreground -->
+<div class="relative z-10 min-h-screen overflow-hidden">
+  <div class="relative w-full h-full" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>
