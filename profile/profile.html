@@ -1,0 +1,79 @@
+<div class="p-4 sm:p-6 pt-10 pb-10">
+  <!-- Logo -->
+  <div class="flex items-center justify-center mb-5">
+    <a *ngIf="employee" href="https://orascom.com/" target="_blank" rel="noopener noreferrer">
+      <img
+        class="transition-all duration-300 hover:scale-110 w-50 h-auto rounded-lg"
+        src="assets/orascom.png"
+        alt="Orascom Logo"
+      />
+    </a>
+  </div>
+
+  <!-- Form Card -->
+  <div *ngIf="employee"
+       class="bg-gray-400/30 backdrop-blur-sm p-6 mx-auto w-full sm:max-w-sm md:max-w-md lg:max-w-lg text-center shadow-2xl rounded-4xl">
+
+    <!-- Title -->
+    <h2 class="text-2xl font-semibold text-white mb-6">Employee Contact Info</h2>
+
+    <!-- Form -->
+    <form (ngSubmit)="onSubmit()" class="space-y-5">
+      <!-- Name -->
+      <div class="relative">
+        <input id="name" name="name" type="text" [ngModel]="employee.name" readonly
+               class="bg-gray-100/30 text-black font-normal w-full pl-12 pr-4 py-3 border border-gray-500 rounded-full text-sm" />
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.121 17.804A10.97 10.97 0 0112 15c2.257 0 4.35.672 6.121 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </div>
+
+      <!-- Email -->
+      <div class="relative">
+        <input id="email" name="email" type="email" [ngModel]="employee.email" readonly
+               class="bg-gray-100/30 text-black font-normal w-full pl-12 pr-4 py-3 border border-gray-500 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 32 32">
+          <path
+            d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM30 25a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23z" />
+        </svg>
+      </div>
+
+      <!-- Phone -->
+      <div class="relative">
+        <input id="phone" name="phone" type="text" [(ngModel)]="employee.phone"
+               class="bg-gray-100/30 text-black font-normal w-full pl-12 pr-4 py-3 border border-gray-500 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h1.28a2 2 0 011.94 1.515l.336 1.342a2 2 0 01-.534 1.893l-.893.893a16.02 16.02 0 006.586 6.586l.893-.893a2 2 0 011.893-.534l1.342.336A2 2 0 0119 17.72V19a2 2 0 01-2 2h-.25C9.61 21 3 14.39 3 6.25V6a2 2 0 012-2z" />
+        </svg>
+      </div>
+
+      <div class="relative">
+        <input id="department" name="department" type="text" [(ngModel)]="employee.department"
+               class="bg-gray-100/30 text-black font-normal w-full pl-12 pr-4 py-3 border border-gray-500 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+            <div class="relative">
+        <input id="position" name="Position" type="text" [(ngModel)]="employee.position"
+               class="bg-gray-100/30 text-black font-normal w-full pl-12 pr-4 py-3 border border-gray-500 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+
+
+
+ 
+
+      <!-- Submit Button -->
+      <div class="text-center pt-4">
+        <button
+          type="submit"
+          class="scale-125 active:scale-100 hover:scale-130 px-6 py-2 bg-black text-white text-sm font-medium rounded-full transition duration-200">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

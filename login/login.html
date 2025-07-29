@@ -1,11 +1,20 @@
 <!-- Add this container for stability -->
+
 <div class="relative min-h-screen flex items-center justify-center">
-  <div class="max-w-md w-full mx-auto p-6 bg-[rgba(255,255,255,0.75)] shadow-lg rounded-xl">
-    <a href="https://orascom.com/" target="_blank" rel="noopener noreferrer">
-      <img class="transition-all duration-300 hover:scale-115 w-32 h-auto rounded-lg mx-auto mb-5"
-           src="assets/orascom.png" />
+  <div class="bg-gray-400/60 p-6 mx-auto w-full sm:max-w-sm md:max-w-md lg:max-w-lg text-center shadow-2xl rounded-4xl pb-10">
+
+ <div class="flex items-center justify-center mb-5">
+    <!-- Centered Logo -->
+      <a href="https://orascom.com/" target="_blank" rel="noopener noreferrer">
+      <img
+        class="transition-all duration-300 hover:scale-110 w-50 sm:w-50 h-auto rounded-lg"
+        src="assets/orascom.png"
+        alt="Orascom Logo"
+      />
     </a>
-    <h2 class="text-2xl font-bold mb-6 text-center">Log In to Your Account</h2>
+
+  </div>
+
 
     <form (ngSubmit)="onSubmit()" [ngClass]="{ 'animate-wiggle': wrongPassword }">
       <!-- Email -->
@@ -17,7 +26,7 @@
           type="email"
           [(ngModel)]="email"
           required
-          class="w-full p-2 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+          class="bg-gray-100/10 shadow-2xl w-full p-2 border border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
         />
       </div>
 
@@ -30,7 +39,7 @@
           type="password"
           [(ngModel)]="password"
           required
-          class="w-full p-2 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+          class="bg-gray-100/10 shadow-2xl w-full p-2 border border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
         />
       </div>
 
@@ -43,9 +52,9 @@
       </button>
     </form>
 
-    <p class="text-center text-sm text-gray-600 mt-4">
+    <p class="text-center text-sm text-white mt-4">
       Don’t have an account?
-      <a routerLink="/signup" class="text-blue-800 hover:underline">Create one</a>
+      <a routerLink="/signup" class="text-blue-900 hover:underline font-bold">Create one</a>
     </p>
   </div>
 </div>
